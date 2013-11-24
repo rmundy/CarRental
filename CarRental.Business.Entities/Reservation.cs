@@ -18,6 +18,8 @@ namespace CarRental.Business.Entities
     using Core.Common.Contracts;
     using Core.Common.Core;
 
+    using ServiceStack.DataAnnotations;
+
     #endregion
 
     /// <summary>
@@ -35,6 +37,7 @@ namespace CarRental.Business.Entities
         ///     The account identifier.
         /// </value>
         [DataMember]
+        [References(typeof(Account))]
         public Guid AccountId { get; set; }
 
         /// <summary>
@@ -44,6 +47,7 @@ namespace CarRental.Business.Entities
         ///     The car identifier.
         /// </value>
         [DataMember]
+        [References(typeof(Car))]
         public Guid CarId { get; set; }
 
         /// <summary>
@@ -81,6 +85,7 @@ namespace CarRental.Business.Entities
         ///     The reservation identifier.
         /// </value>
         [DataMember]
+        [PrimaryKey]
         public Guid ReservationId { get; set; }
 
         /// <summary>

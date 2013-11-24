@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Common.Contracts
+namespace Core.Common.Tests
 {
-    public interface IDirtyCapable
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    [TestClass]
+    public class ObjectBaseTests
     {
+
     }
 }

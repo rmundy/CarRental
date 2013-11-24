@@ -18,6 +18,8 @@ namespace CarRental.Business.Entities
     using Core.Common.Contracts;
     using Core.Common.Core;
 
+    using ServiceStack.DataAnnotations;
+
     #endregion
 
     /// <summary>
@@ -35,6 +37,7 @@ namespace CarRental.Business.Entities
         ///     The account identifier.
         /// </value>
         [DataMember]
+        [PrimaryKey]
         public Guid AccountId { get; set; }
 
         /// <summary>
@@ -117,6 +120,7 @@ namespace CarRental.Business.Entities
         ///     The login email.
         /// </value>
         [DataMember]
+        [Index(Unique = true)]
         public String LoginEmail { get; set; }
 
         /// <summary>

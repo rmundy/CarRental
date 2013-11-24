@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Common.Contracts
+namespace Core.Common.Core
 {
-    public interface IDirtyCapable
+    public class NotificationObject
     {
     }
 }
